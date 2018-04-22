@@ -9,3 +9,6 @@ clientes_vip = clientes[c(2,3)]
 
 save(pedidos, clientes_vip, file = "repaso-r/data/pedidos.Rdata")
 saveRDS(pedidos, file = "repaso-r/data/pedidos.rds")
+
+# limpiar datos después de guardar
+remove(pedidos)
