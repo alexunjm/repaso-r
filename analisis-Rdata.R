@@ -21,3 +21,6 @@ orders <- readRDS("repaso-r/data/pedidos.rds")
 
 data("iris")
 data("cars")
+
+#guarda toda la información de la sesión actual
+save.image("repaso-r/data/alldata.Rdata")
