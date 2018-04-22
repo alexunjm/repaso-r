@@ -18,3 +18,6 @@ remove(pedidos)
 load("repaso-r/data/pedidos.Rdata")
 
 orders <- readRDS("repaso-r/data/pedidos.rds")
+
+data("iris")
+data("cars")
