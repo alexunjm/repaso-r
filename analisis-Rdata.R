@@ -16,3 +16,5 @@ remove(pedidos)
 
 #cargar datos
 load("repaso-r/data/pedidos.Rdata")
+
+orders <- readRDS("repaso-r/data/pedidos.rds")
