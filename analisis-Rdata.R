@@ -5,5 +5,7 @@ pago <- c(123,12.5,156.7)
 
 pedidos <- data.frame(clientes, fechas, pago)
 
-save(pedidos, file = "repaso-r/data/pedidos.Rdata")
+clientes_vip = clientes[c(2,3)]
+
+save(pedidos, clientes_vip, file = "repaso-r/data/pedidos.Rdata")
 saveRDS(pedidos, file = "repaso-r/data/pedidos.rds")
