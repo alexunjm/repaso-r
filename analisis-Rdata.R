@@ -12,3 +12,7 @@ saveRDS(pedidos, file = "repaso-r/data/pedidos.rds")
 
 # limpiar datos después de guardar
 remove(pedidos)
+
+
+#cargar datos
+load("repaso-r/data/pedidos.Rdata")
