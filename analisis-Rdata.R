@@ -14,7 +14,7 @@ saveRDS(pedidos, file = "repaso-r/data/pedidos.rds")
 remove(pedidos)
 
 
-#cargar datos
+#cargar datos (sobreescribe sin previo aviso si ya existen)
 load("repaso-r/data/pedidos.Rdata")
 
 orders <- readRDS("repaso-r/data/pedidos.rds")
@@ -24,3 +24,11 @@ data("cars")
 
 #guarda toda la información de la sesión actual
 save.image("repaso-r/data/alldata.Rdata")
+
+primos = c(1,2,3,5,7,11,13)
+potenciasDe2 = c(2,4,8,16,32,64,128,256)
+
+save(list = c("primos", "potenciasDe2"), file = "repaso-r/data/primos_y_potenciasDe2.Rdata")
+
+# igual que load, pero saca warning si ya existen y quieres sobreescribir
+attach("repaso-r/data/primos_y_potenciasDe2.Rdata")
