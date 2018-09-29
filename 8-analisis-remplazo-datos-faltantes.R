@@ -13,11 +13,13 @@ rand.impute <- function(x) {# x vector de datos que puede contender valores NA
   #vector del mismo tamaño que x con booleanos T/F dependiendo si son NA
   missing <- is.na(x)
   # contamos cuantos valores son NA
+  # en un vector de booleanos, cuando se suman, cuenta cuantos estan en True
   n.missing <- sum(missing)
   # datos con valores diferentes a NA en x
   x.obs <- x[!missing]
   # por defecto lo mismo entrado por parámetro
   imputed <- x
+  # SAMPLE: MUESTREO ALEATORIO
   # los valores de los datos faltantes los reemplazamos 
   # por los valores de una muestra de los que si conocemos
   imputed[missing] <- sample(x.obs, n.missing, replace = TRUE)

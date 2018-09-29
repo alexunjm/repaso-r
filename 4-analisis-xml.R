@@ -27,6 +27,7 @@ cds.catalog[1:5,]
 url_html <- "repaso-r/data/WorldPopulation-wiki.htm"
 # sacar todas las tablas del html
 tables <- readHTMLTable(url_html)
+names(tables)
 # sacar la sexta (6) tabla (doble corchete porque es lista de listas)
 most_populated = tables[[6]]
 # mostrar las 3 primeras filas de la tabla
