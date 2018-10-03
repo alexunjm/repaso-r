@@ -21,3 +21,33 @@ housing.data.copy3$ptratio <- impute(housing.data.copy3$ptratio, 18)
 housing.data.copy3$rad <- impute(housing.data.copy3$rad, 7)
 
 summary(housing.data.copy3)
+
+# análisis importante de los datos faltantes
+install.packages("mice")
+library("mice")
+md.pattern(housing.data)
+
+
+install.packages("VIM")
+library("VIM")
+aggr(housing.data)
+
+aggr(housing.data, col=c("green", "red"), numbers = TRUE )
+
+aggr(housing.data,
+     col=c("green", "red"),
+     numbers = TRUE,
+     sortVars = TRUE,
+     labels = names(housing.data), 
+     cex.axis = 0.7 #tamaño de la fuente para que quepan las variables
+)
+
+aggr(housing.data,
+     col=c("green", "red"),
+     numbers = TRUE,
+     sortVars = TRUE,
+     labels = names(housing.data), 
+     cex.axis = 0.7, #tamaño de la fuente para que quepan las variables
+     gap = 1, #standard 5
+     ylab = c("histograma de NAs", "Patron") #nombres de los ejes
+)
